@@ -1,0 +1,11 @@
+langchain
+langchain-community
+langchain-openai
+langchain-pinecone
+pinecone-client
+beautifulsoup4
+requests
+python-dotenv
+streamlit
+tiktoken
+langchain-text-splitters
