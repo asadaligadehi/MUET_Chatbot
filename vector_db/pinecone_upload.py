@@ -32,7 +32,7 @@ print("Index ready")
 with open("data/muet_data.txt", "r", encoding="utf-8") as f:
     text = f.read()
 
-# Split text into chunks
+# Split text into chunks  b/c llm can not handle the huge text at once
 text_splitter = CharacterTextSplitter(
     chunk_size=1000,
     chunk_overlap=200
@@ -40,7 +40,7 @@ text_splitter = CharacterTextSplitter(
 
 chunks = text_splitter.split_text(text)
 
-docs = [Document(page_content=c) for c in chunks]
+docs = [Document(page_content=c) for c in chunks]     #Wraps text chunks into LangChain format.
 
 # Embeddings
 embeddings = OpenAIEmbeddings()

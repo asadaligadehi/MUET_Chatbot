@@ -36,7 +36,8 @@ os.makedirs("data", exist_ok=True)
 
 with open("data/muet_data.txt", "w", encoding="utf-8") as f:
 
-    
+
     f.write(all_text)
 
 print("Scraping completed and saved in data/muet_data.txt")
+
